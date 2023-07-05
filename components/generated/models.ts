@@ -5,65 +5,75 @@ import type function_IncrementalDelay from "../../.wundergraph/operations/increm
 import type function_UsersGet from "../../.wundergraph/operations/users/get";
 import type function_UsersSubscribe from "../../.wundergraph/operations/users/subscribe";
 import type function_UsersUpdate from "../../.wundergraph/operations/users/update";
-import type { ExtractInput, ExtractResponse } from "@wundergraph/sdk/operations";
+import type {
+  ExtractInput,
+  ExtractResponse,
+} from "@wundergraph/sdk/operations";
 import type { OperationErrors } from "./ts-operation-errors";
 import type { GraphQLError } from "@wundergraph/sdk/client";
 
 export interface mongodb_moviesCreateInput {
-	id?: string;
-	duration: string;
-	fileName: string;
-	origin_country: string;
-	rating: string;
-	title: string;
+  id?: string;
+  duration: string;
+  fileName: string;
+  origin_country: string;
+  rating: string;
+  title: string;
 }
 
 export interface mongodb_moviesWhereUniqueInput {
-	id?: string;
+  id?: string;
 }
 
 export interface mongodb_moviesUpdateInput {
-	duration?: mongodb_BigIntFieldUpdateOperationsInput;
-	fileName?: mongodb_StringFieldUpdateOperationsInput;
-	origin_country?: mongodb_StringFieldUpdateOperationsInput;
-	rating?: mongodb_StringFieldUpdateOperationsInput;
-	title?: mongodb_StringFieldUpdateOperationsInput;
+  duration?: mongodb_BigIntFieldUpdateOperationsInput;
+  fileName?: mongodb_StringFieldUpdateOperationsInput;
+  origin_country?: mongodb_StringFieldUpdateOperationsInput;
+  rating?: mongodb_StringFieldUpdateOperationsInput;
+  title?: mongodb_StringFieldUpdateOperationsInput;
 }
 
 export interface mongodb_BigIntFieldUpdateOperationsInput {
-	set?: string;
-	increment?: string;
-	decrement?: string;
-	multiply?: string;
-	divide?: string;
+  set?: string;
+  increment?: string;
+  decrement?: string;
+  multiply?: string;
+  divide?: string;
 }
 
 export interface mongodb_StringFieldUpdateOperationsInput {
-	set?: string;
+  set?: string;
 }
 
-export type JSONValue = string | number | boolean | JSONObject | Array<JSONValue>;
+export type JSONValue =
+  | string
+  | number
+  | boolean
+  | JSONObject
+  | Array<JSONValue>;
 
 export type JSONObject = { [key: string]: JSONValue };
 
 export interface MoviesAddInput {
-	data: mongodb_moviesCreateInput;
+  data: mongodb_moviesCreateInput;
 }
 
 export interface MoviesDeleteInput {
-	id: mongodb_moviesWhereUniqueInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
 export interface MoviesMovieWithIDInput {
-	id?: string;
+  id?: string;
 }
 
 export interface MoviesUpdateInput {
-	data: mongodb_moviesUpdateInput;
-	id: mongodb_moviesWhereUniqueInput;
+  data: mongodb_moviesUpdateInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
-export type IncrementalDelayInput = ExtractInput<typeof function_IncrementalDelay>;
+export type IncrementalDelayInput = ExtractInput<
+  typeof function_IncrementalDelay
+>;
 
 export type UsersGetInput = ExtractInput<typeof function_UsersGet>;
 
@@ -72,173 +82,181 @@ export type UsersSubscribeInput = ExtractInput<typeof function_UsersSubscribe>;
 export type UsersUpdateInput = ExtractInput<typeof function_UsersUpdate>;
 
 export interface MoviesAddInputInternal {
-	data: mongodb_moviesCreateInput;
+  data: mongodb_moviesCreateInput;
 }
 
 export interface MoviesDeleteInputInternal {
-	id: mongodb_moviesWhereUniqueInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
 export interface MoviesMovieWithIDInputInternal {
-	id?: string;
+  id?: string;
 }
 
 export interface MoviesUpdateInputInternal {
-	data: mongodb_moviesUpdateInput;
-	id: mongodb_moviesWhereUniqueInput;
+  data: mongodb_moviesUpdateInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
 export interface IncrementalDelayInputInternal {
-	seconds: number;
+  seconds: number;
 }
 
 export interface UsersGetInputInternal {
-	id: string;
+  id: string;
 }
 
 export interface UsersSubscribeInputInternal {
-	id: string;
+  id: string;
 }
 
 export interface UsersUpdateInputInternal {
-	id: string;
-	name: string;
-	bio: string;
+  id: string;
+  name: string;
+  bio: string;
 }
 
 export interface MoviesAddInputInjected {
-	data: mongodb_moviesCreateInput;
+  data: mongodb_moviesCreateInput;
 }
 
 export interface MoviesDeleteInputInjected {
-	id: mongodb_moviesWhereUniqueInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
 export interface MoviesMovieWithIDInputInjected {
-	id?: string;
+  id?: string;
 }
 
 export interface MoviesUpdateInputInjected {
-	data: mongodb_moviesUpdateInput;
-	id: mongodb_moviesWhereUniqueInput;
+  data: mongodb_moviesUpdateInput;
+  id: mongodb_moviesWhereUniqueInput;
 }
 
 export interface DragonsResponse {
-	data?: DragonsResponseData;
-	errors?: GraphQLError[];
+  data?: DragonsResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface MoviesResponse {
-	data?: MoviesResponseData;
-	errors?: GraphQLError[];
+  data?: MoviesResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface MoviesAddResponse {
-	data?: MoviesAddResponseData;
-	errors?: GraphQLError[];
+  data?: MoviesAddResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface MoviesDeleteResponse {
-	data?: MoviesDeleteResponseData;
-	errors?: GraphQLError[];
+  data?: MoviesDeleteResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface MoviesMovieWithIDResponse {
-	data?: MoviesMovieWithIDResponseData;
-	errors?: GraphQLError[];
+  data?: MoviesMovieWithIDResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface MoviesUpdateResponse {
-	data?: MoviesUpdateResponseData;
-	errors?: GraphQLError[];
+  data?: MoviesUpdateResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface IncrementalDataResponse {
-	data?: IncrementalDataResponseData;
-	errors?: GraphQLError[];
+  data?: IncrementalDataResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface IncrementalDelayResponse {
-	data?: IncrementalDelayResponseData;
-	errors?: GraphQLError[];
+  data?: IncrementalDelayResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface UsersGetResponse {
-	data?: UsersGetResponseData;
-	errors?: GraphQLError[];
+  data?: UsersGetResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface UsersSubscribeResponse {
-	data?: UsersSubscribeResponseData;
-	errors?: GraphQLError[];
+  data?: UsersSubscribeResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface UsersUpdateResponse {
-	data?: UsersUpdateResponseData;
-	errors?: GraphQLError[];
+  data?: UsersUpdateResponseData;
+  errors?: GraphQLError[];
 }
 
 export interface DragonsResponseData {
-	spacex_dragons?: {
-		name?: string;
-		active?: boolean;
-	}[];
+  spacex_dragons?: {
+    name?: string;
+    active?: boolean;
+  }[];
 }
 
 export interface MoviesResponseData {
-	mongodb_findManymovies: {
-		id: string;
-		title: string;
-		origin_country: string;
-		rating: string;
-		duration: string;
-		fileName: string;
-	}[];
+  mongodb_findManymovies: {
+    id: string;
+    title: string;
+    origin_country: string;
+    rating: string;
+    duration: string;
+    fileName: string;
+  }[];
 }
 
 export interface MoviesAddResponseData {
-	mongodb_createOnemovies?: {
-		title: string;
-		origin_country: string;
-		rating: string;
-		duration: string;
-		fileName: string;
-	};
+  mongodb_createOnemovies?: {
+    title: string;
+    origin_country: string;
+    rating: string;
+    duration: string;
+    fileName: string;
+  };
 }
 
 export interface MoviesDeleteResponseData {
-	mongodb_deleteOnemovies?: {
-		id: string;
-	};
+  mongodb_deleteOnemovies?: {
+    id: string;
+  };
 }
 
 export interface MoviesMovieWithIDResponseData {
-	mongodb_findFirstmovies?: {
-		id: string;
-		title: string;
-		origin_country: string;
-		rating: string;
-		duration: string;
-		fileName: string;
-	};
+  mongodb_findFirstmovies?: {
+    id: string;
+    title: string;
+    origin_country: string;
+    rating: string;
+    duration: string;
+    fileName: string;
+  };
 }
 
 export interface MoviesUpdateResponseData {
-	mongodb_updateOnemovies?: {
-		title: string;
-		origin_country: string;
-		rating: string;
-		duration: string;
-		fileName: string;
-	};
+  mongodb_updateOnemovies?: {
+    title: string;
+    origin_country: string;
+    rating: string;
+    duration: string;
+    fileName: string;
+  };
 }
 
-export type IncrementalDataResponseData = ExtractResponse<typeof function_IncrementalData>;
+export type IncrementalDataResponseData = ExtractResponse<
+  typeof function_IncrementalData
+>;
 
-export type IncrementalDelayResponseData = ExtractResponse<typeof function_IncrementalDelay>;
+export type IncrementalDelayResponseData = ExtractResponse<
+  typeof function_IncrementalDelay
+>;
 
 export type UsersGetResponseData = ExtractResponse<typeof function_UsersGet>;
 
-export type UsersSubscribeResponseData = ExtractResponse<typeof function_UsersSubscribe>;
+export type UsersSubscribeResponseData = ExtractResponse<
+  typeof function_UsersSubscribe
+>;
 
-export type UsersUpdateResponseData = ExtractResponse<typeof function_UsersUpdate>;
+export type UsersUpdateResponseData = ExtractResponse<
+  typeof function_UsersUpdate
+>;

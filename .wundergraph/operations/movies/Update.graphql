@@ -1,5 +1,8 @@
-mutation Update($data: mongodb_moviesUpdateInput!, $id:mongodb_moviesWhereUniqueInput!) {
-  mongodb_updateOnemovies(data: $data,where: $id) {
+mutation Update(
+  $data: mongodb_moviesUpdateInput!
+  $id: mongodb_moviesWhereUniqueInput!
+) {
+  mongodb_updateOnemovies(data: $data, where: $id) {
     title
     origin_country
     rating
