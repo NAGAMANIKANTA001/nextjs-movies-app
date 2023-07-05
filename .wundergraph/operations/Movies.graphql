@@ -1,0 +1,10 @@
+query Movies() {
+    mongodb_findManymovies(take: 10) {
+        id
+        title
+        origin_country
+        rating
+        duration
+        fileName
+    }
+}

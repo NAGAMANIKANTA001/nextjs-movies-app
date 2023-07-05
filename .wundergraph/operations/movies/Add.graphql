@@ -1,0 +1,11 @@
+mutation Add($data: mongodb_moviesCreateInput!) {
+  mongodb_createOnemovies(
+    data:$data
+  ) {
+    title
+    origin_country
+    rating
+    duration
+    fileName
+  }
+}

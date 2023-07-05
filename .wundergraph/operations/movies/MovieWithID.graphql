@@ -1,0 +1,10 @@
+query MovieWithID($id: String) {
+  mongodb_findFirstmovies(where: { id: { equals: $id } }) {
+    id
+    title
+    origin_country
+    rating
+    duration
+    fileName
+  }
+}

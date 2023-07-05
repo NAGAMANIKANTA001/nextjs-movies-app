@@ -1,0 +1,5 @@
+mutation Delete($id: mongodb_moviesWhereUniqueInput!) {
+  mongodb_deleteOnemovies(where: $id) {
+    id
+  }
+}
